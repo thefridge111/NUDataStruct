@@ -9,14 +9,19 @@ int main() {
     cout << "Creating a Linked List." << endl;
 
     LinkedList myList;
+    cout << "got here..." << endl;
     double x;
-
-    try {
+    
+    cout << "WE MADE IT!" << endl;
+    
+    try{
         myList.InsertFront(3.0);
     }    catch (...) {
         cout << "InsertFront 1 failed" << endl;
     }
-
+    
+    cout << "here." << endl;
+    
     try {
         myList.Insert(4.0, 0);
         myList.Insert(5.0, 2);
@@ -24,7 +29,7 @@ int main() {
     } catch (...) {
         cout << "Insert failed" << endl;
     }
-
+    cout << "moving along" << endl;
     try {
         myList.Insert(7.0, 6);
         cout << "Insert should have failed" << endl;
@@ -40,7 +45,7 @@ int main() {
 
     cout << myList.GetNode(0) << " (8)" << endl;
     cout << myList.GetNode(4) << " (5)" << endl;
-
+    cout << "wow" << endl;
     try {
         x = myList.GetNode(5);
         cout << "GetNode should have failed, returned " << x << endl;
@@ -51,6 +56,8 @@ int main() {
     cout << myList.Search(5.0) << " (4)" << endl;
     cout << myList.Search(4.0) << " (1)" << endl;
     
+    cout << "getting there.." << endl;
+    
     try {
         x = myList.Search(-1.0) ;
         cout << "Search should have failed, returned " << x << endl;
@@ -60,7 +67,9 @@ int main() {
 
     cout << myList.DeleteNode(0) << " (8)" << endl;
     cout << myList.DeleteNode(3) << " (5)" << endl;
-
+    
+    cout << "Almost there!" << endl;
+    
     try {
         x = myList.DeleteNode(16);
         cout << "DeleteNode should have failed, returned " << x << endl;
@@ -72,13 +81,19 @@ int main() {
     myList.InsertFront(10.0);
 
     cout << myList.GetLength() << " (5)" << endl;
-
+    
+    for (int i = 0; i < myList.GetLength(); i++) {
+        cout << myList.GetNode(i) << ", ";
+    }
+    
     try {
         myList.Reverse();
     } catch (...) {
         cout << "Reverse failed" << endl;
     }
-
+    
+    cout << "So close!" << endl;
+    
     for (int i = 0; i < myList.GetLength(); i++) {
         cout << myList.GetNode(i) << ", ";
     }

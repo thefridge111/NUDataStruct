@@ -2,10 +2,12 @@
 
 #ifndef __LINKEDLIST_H__
 #define __LINKEDLIST_H__
+#include <cstdlib>
 
 struct Node
 {
-// Add the appropriate content here  
+  double data;
+  Node* next;// Add the appropriate content here  
 };
 
 class LinkedList
@@ -30,7 +32,11 @@ public:
   int GetLength();        // Return the number of nodes in the list
 
 private:
-// Add the appropriate content here
+    Node *head_ptr;
+    unsigned int many_nodes;
+    Node *cursor;
+    Node *precur;
+    // Add the appropriate content here
 };
 
 
