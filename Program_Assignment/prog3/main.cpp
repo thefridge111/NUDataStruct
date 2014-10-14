@@ -10,7 +10,9 @@ int main()
     cout << "Creating a double stack." << endl;
 
     DoubleStack ds;
-
+    
+    //ds.printArray(); 
+    
     ds.PushA('a');
     ds.PushA('b');
     ds.PushB('c');
@@ -32,7 +34,9 @@ int main()
     cout << "Top of B: " << ds.TopB() << " (should be h)." << endl;
 
     cout << "There are " << ds.size() << " items on the stack (should be 6)." << endl;
-
+    
+    //ds.printArray();
+    
     for (int i = 0; i < 14; i++)
     {
         try
@@ -44,7 +48,9 @@ int main()
             cout << "Failed to push character " << 'i' + i << endl;
         }
     }
-
+    
+    //ds.printArray();
+    
     try
     {
         ds.PushA('?');
@@ -66,18 +72,17 @@ int main()
     }
 
     cout << "how about here?" << endl;
-    try {                                   // Added try statement to handle 
-    for (int i = 0; i < 17; i++)            // throw statement in imp file. WFP
+                                     // Added try statement to handle 
+    for (int i = 0; i < 17; i++) {            // throw statement in imp file. WFP
         ds.PopA();                          // Pop functions have error handling
     }
-    catch (...) {
-        cout << "throw worked correctly" << endl;
-    }
-    
+        
     for (int i = 0; i < 3; i++)
         ds.PopB();
 
     cout << "got to here.." << endl;
+    
+    //ds.printArray();
     
     try
     {

@@ -3,22 +3,18 @@
 #include "DoubleStack.h"
 #include <iostream>
 
+using namespace std; 
+
 // Default constructor, the stack is empty to start
 DoubleStack::DoubleStack() {
     used = 0;
     topA = 0;
     topB = CAPACITY - 1;
-    stack[CAPACITY] = {};
 }
 
 
 // Default destructor
 DoubleStack::~DoubleStack() {
-    used = 0;
-    topA = 0;
-    topB = 0;
-    stack[CAPACITY]= {};
-    // Insert your code here 
 }
 
 // Add "value" to the top of stack A
@@ -47,12 +43,11 @@ void DoubleStack::PushB(char value) {
 char DoubleStack::PopA() {
     char value;
     
-    if ((used == 0) || (topA == 0)) {
-        value = NULL;
-        //throw 3;
+    if (topA == 0) {
+        throw 3;
     } else {
     value = stack[topA - 1];
-    stack[topA - 1] = 0;
+    stack[topA - 1] = 'z';
     topA--;
     used--;
     }
@@ -64,13 +59,12 @@ char DoubleStack::PopA() {
 char DoubleStack::PopB() {
     char value;
     
-    if ((used == 0) || (topB == CAPACITY - 1)) {
-        value = NULL;
+    if (topB == CAPACITY - 1) {
         throw 4;
     } else {
     value = stack[topB + 1];
-    stack[topB + 1] = 0;
-    topB--;
+    stack[topB + 1] = 'z';
+    topB++;
     used--;
     }
     
@@ -106,4 +100,11 @@ char DoubleStack::TopB() {
 // Return the number of items in the stack
 unsigned int DoubleStack::size() {
     return used; 
+}
+
+// Print out entire contents of stack array
+void DoubleStack::printArray() {
+    for (int i = 0; i < 20; i++) {
+        cout << i << " : " << stack[i] << endl;
+    }
 }

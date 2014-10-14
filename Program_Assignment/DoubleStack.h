@@ -22,12 +22,12 @@ public:
 
   unsigned int size();        // Return the number of items in the stack   
                               // Both stack A & B
-
+  void printArray();          // Dump array contents
 private:
     unsigned int used;    
     unsigned int topA;
     unsigned int topB;
-    char stack[];
+    char stack[CAPACITY];
 };
 
 
