@@ -19,10 +19,11 @@ DoubleStack::~DoubleStack() {
 
 // Add "value" to the top of stack A
 void DoubleStack::PushA(char value) {
+    // Check for stack overflow
     if (used != CAPACITY) {
         stack[topA] = value;
-        topA++;
-        used++;
+        topA++;                 // Increment A stack index value
+        used++;                 // Increment amount of array used
     } else {
         throw 1;
     }
@@ -30,10 +31,11 @@ void DoubleStack::PushA(char value) {
 
 // Add "value" to the top of stack B
 void DoubleStack::PushB(char value) {
+    // Check for stack overflow
     if (used != CAPACITY) {
         stack[topB] = value;
-        topB--;
-        used++;
+        topB--;                 // Decrement B stack index value
+        used++;                 // Increment amount of array used
     } else {
         throw 2;
     }
@@ -42,14 +44,14 @@ void DoubleStack::PushB(char value) {
 // Remove and return the item on the top of stack A
 char DoubleStack::PopA() {
     char value;
-    
+    // Check for stack underflow
     if (topA == 0) {
         throw 3;
     } else {
     value = stack[topA - 1];
     stack[topA - 1] = 'z';
-    topA--;
-    used--;
+    topA--;                     // Decrement A stack index value
+    used--;                     // Decrement amount of array used
     }
     
     return value; 
@@ -58,14 +60,14 @@ char DoubleStack::PopA() {
 // Remove and return the item on the top of stack B
 char DoubleStack::PopB() {
     char value;
-    
+    // Check for stack underflow
     if (topB == CAPACITY - 1) {
         throw 4;
     } else {
     value = stack[topB + 1];
     stack[topB + 1] = 'z';
-    topB++;
-    used--;
+    topB++;                         // Increment B stack index value
+    used--;                         // Decrement amount of array used
     }
     
     return value; 
@@ -74,7 +76,7 @@ char DoubleStack::PopB() {
 // Return the item on the top of stack A
 char DoubleStack::TopA() {
     char value;
-    
+    // Check for stack underflow
     if (used == 0 || topA == 0) {
         throw 3;
     } else {
@@ -87,8 +89,8 @@ char DoubleStack::TopA() {
 // Return the item on the top of stack B
 char DoubleStack::TopB() {
     char value;
-    
-    if (used == 0 || topB == 0) {
+    // Check for stack underflow
+    if (used == 0 || topB == CAPACITY) {
         throw 3;
     } else {
     value = stack[topB + 1];
@@ -104,6 +106,7 @@ unsigned int DoubleStack::size() {
 
 // Print out entire contents of stack array
 void DoubleStack::printArray() {
+    // Increment through array, printing contents
     for (int i = 0; i < 20; i++) {
         cout << i << " : " << stack[i] << endl;
     }
