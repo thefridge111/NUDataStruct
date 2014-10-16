@@ -1,9 +1,9 @@
 CC = g++
 CCFLAGS = -Wall -g
 
-all: program1 program2 program3
+all: program1 program2 program3 program4
 
-clean: clean1 clean2 clean3
+clean: clean1 clean2 clean3 program4
 
 
 ###PROGRAM 1#######################
@@ -45,3 +45,16 @@ DoubleStack.o: DoubleStack.cpp DoubleStack.h Makefile
 	
 prog3/main.o: prog3/main.cpp DoubleStack.h Makefile
 	${CC} ${CCFLAGS} -o prog3/main.o -c prog3/main.cpp
+
+###PROGRAM 4#######################
+program4: prog4/main.o Airport.o Makefile
+	${CC} ${CCFLAGS} -o program4 prog4/main.o Airport.o
+
+clean4:
+	rm -f program4 prog4/main.o Airport.o *.core
+
+Airport.o: Airport.cpp Airport.h Makefile
+	${CC} ${CCFLAGS} -c Airport.cpp
+	
+prog4/main.o: prog4/main.cpp Airport.h Makefile
+	${CC} ${CCFLAGS} -o prog4/main.o -c prog4/main.cpp
