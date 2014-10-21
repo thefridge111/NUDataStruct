@@ -11,7 +11,7 @@ int main() {
     
     cout << "Starting the first simulation." << endl;
 
-    Airport(5, 2, 0.1, 0.2, 45, 120);
+    Airport(5, 2, 0.5, 0.2, 45, 120);
 
     cout << "First simulation finished (press enter to continue)" << endl;
 

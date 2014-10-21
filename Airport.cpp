@@ -137,16 +137,37 @@ void Airport(
         land_times.pop();
     }
     
-    //Average calculations
+    //Check for possible invalid calculation
+    if(takeoff_count != 0) {
+    //Average calculation
     avg_Takeoff = (avg_Takeoff / takeoff_count);
+    } else {
+        avg_Takeoff = 0;
+    }
+    //Check for possible invalid calculation
+    if(land_count != 0) {
+    //Average calculation
     avg_Land = (avg_Land / land_count);
+    } else {
+        avg_Land = 0;
+    }
     
     //Print statistics to screen
     cout << "Number of successful takeoffs: " << success_Takeoff << endl;
     cout << "Number of successful landings: " << success_Land << endl;
     cout << "Number of crashed planes: " << fail_Land << endl;
-    cout << "Average takeoff wait time: " << avg_Takeoff << endl;
-    cout << "Average landing wait time: " << avg_Land << endl;
+    //Print appropriate message based on takeoff average time
+    if (avg_Takeoff == 0) {
+        cout << "No average takeoff wait time - No planes took off." << endl;
+    } else {
+        cout << "Average takeoff wait time: " << avg_Takeoff << endl;
+    }
+    //Print appropriate message based on landing average time
+    if (avg_Land == 0) {
+        cout << "No average landing wait time - No planes took off." << endl;
+    } else {
+        cout << "Average landing wait time: " << avg_Land << endl;
+    }
     cout << "Planes left in takeoff queue: " << takeoff.size() << endl;
     cout << "Planes left in landing queue: " << landing.size() << endl;
 
