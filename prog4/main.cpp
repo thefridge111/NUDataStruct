@@ -15,7 +15,7 @@ int main() {
 
     cout << "First simulation finished (press enter to continue)" << endl;
 
-    cin >> x;
+    //cin >> x;
 
     cout << "Starting the second simulation." << endl;
 
