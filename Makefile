@@ -1,9 +1,9 @@
 CC = g++
 CCFLAGS = -Wall -g
 
-all: program1 program2 program3 program4
+all: program1 program2 program3 program4 program5
 
-clean: clean1 clean2 clean3 program4
+clean: clean1 clean2 clean3 clean4 clean5
 
 
 ###PROGRAM 1#######################
@@ -58,3 +58,17 @@ Airport.o: Airport.cpp Airport.h Makefile
 	
 prog4/main.o: prog4/main.cpp Airport.h Makefile
 	${CC} ${CCFLAGS} -o prog4/main.o -c prog4/main.cpp
+
+###PROGRAM 5#######################
+program5: prog5/main.o mathTree.o Makefile
+	${CC} ${CCFLAGS} -o program5 prog5/main.o mathTree.o
+
+clean5:
+	rm -f program5 prog5/main.o mathTree.o *.core
+
+mathTree.o: mathTree.cpp mathTree.h Makefile
+	${CC} ${CCFLAGS} -c mathTree.cpp
+	
+prog5/main.o: prog5/main.cpp mathTree.h Makefile
+	${CC} ${CCFLAGS} -o prog5/main.o -c prog5/main.cpp
+
