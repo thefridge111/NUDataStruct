@@ -17,8 +17,13 @@
       <df name="prog5">
         <in>main.cpp</in>
       </df>
+      <df name="prog6">
+        <in>main.cpp</in>
+      </df>
       <in>Airport.cpp</in>
       <in>Airport.h</in>
+      <in>BinarySearch.cpp</in>
+      <in>BinarySearch.h</in>
       <in>DoubleStack.cpp</in>
       <in>DoubleStack.h</in>
       <in>LinkedList.cpp</in>

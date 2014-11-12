@@ -8,6 +8,14 @@
       <df name="prog2">
         <in>main.cpp</in>
       </df>
+      <df name="prog5">
+        <in>main.cpp</in>
+      </df>
+      <df name="prog6">
+        <in>main.cpp</in>
+      </df>
+      <in>BinarySearch.cpp</in>
+      <in>BinarySearch.h</in>
       <in>LinkedList.cpp</in>
       <in>LinkedList.h</in>
       <in>array.cpp</in>
@@ -39,7 +47,7 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath>program5.exe</executablePath>
+          <executablePath>program6.exe</executablePath>
           <ccTool>
             <incDir>
               <pElem></pElem>
@@ -47,6 +55,10 @@
           </ccTool>
         </makeTool>
       </makefileType>
+      <item path="BinarySearch.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BinarySearch.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LinkedList.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LinkedList.h" ex="false" tool="3" flavor2="0">
@@ -58,6 +70,10 @@
       <item path="prog1/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="prog2/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="prog5/main.cpp" ex="false" tool="1" flavor2="9">
+      </item>
+      <item path="prog6/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>
