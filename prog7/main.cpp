@@ -18,14 +18,18 @@ int main() {
     HashTable A;
     
     value = 55;
-    for (int i = 1; i < 21; i++) {
+    for (int i = 1; i < 21; i++) {      //Populates table with multiples of 55
         A.insert(value * i); 
     } 
         
-    A.print();
-    value = A.size();
-    cout << "Size is: " << value << endl;
+    A.print();                          //Tests prints function
     
+    value = A.size();
+    cout << "Size is: " << value << endl;   //Tests size function
+    
+    //Code below tests that find works appropriately. Test values are reset
+    //before each function call so as to ensure that values are being modified
+    //appropriately.
     value = 165;
     result = 100;
     found = false;
