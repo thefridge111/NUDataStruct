@@ -14,8 +14,13 @@
       <df name="prog6">
         <in>main.cpp</in>
       </df>
+      <df name="prog7">
+        <in>main.cpp</in>
+      </df>
       <in>BinarySearch.cpp</in>
       <in>BinarySearch.h</in>
+      <in>HashTable.cpp</in>
+      <in>HashTable.h</in>
       <in>LinkedList.cpp</in>
       <in>LinkedList.h</in>
       <in>array.cpp</in>
@@ -47,7 +52,7 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath>program6.exe</executablePath>
+          <executablePath>program7.exe</executablePath>
           <ccTool>
             <incDir>
               <pElem></pElem>
@@ -58,6 +63,10 @@
       <item path="BinarySearch.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="BinarySearch.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="HashTable.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="HashTable.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LinkedList.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -74,6 +83,8 @@
       <item path="prog5/main.cpp" ex="false" tool="1" flavor2="9">
       </item>
       <item path="prog6/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="prog7/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -1,9 +1,9 @@
 CC = g++
 CCFLAGS = -Wall -g
 
-all: program1 program2 program3 program4 program5 program6
+all: program1 program2 program3 program4 program5 program6 program7
 
-clean: clean1 clean2 clean3 clean4 clean5 clean6
+clean: clean1 clean2 clean3 clean4 clean5 clean6 clean7
 
 
 ###PROGRAM 1#######################
@@ -84,4 +84,17 @@ BinarySearch.o: BinarySearch.cpp BinarySearch.h Makefile
 	
 prog6/main.o: prog6/main.cpp BinarySearch.h Makefile
 	${CC} ${CCFLAGS} -o prog6/main.o -c prog6/main.cpp
+
+###PROGRAM 7#######################
+program7: prog7/main.o HashTable.o Makefile
+	${CC} ${CCFLAGS} -o program7 prog7/main.o HashTable.o
+
+clean7:
+	rm -f program7 prog7/main.o HashTable.o *.core
+
+HashTable.o: HashTable.cpp HashTable.h Makefile
+	${CC} ${CCFLAGS} -c HashTable.cpp
+	
+prog7/main.o: prog7/main.cpp HashTable.h Makefile
+	${CC} ${CCFLAGS} -o prog7/main.o -c prog7/main.cpp
 

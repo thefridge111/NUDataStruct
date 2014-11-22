@@ -20,12 +20,17 @@
       <df name="prog6">
         <in>main.cpp</in>
       </df>
+      <df name="prog7">
+        <in>main.cpp</in>
+      </df>
       <in>Airport.cpp</in>
       <in>Airport.h</in>
       <in>BinarySearch.cpp</in>
       <in>BinarySearch.h</in>
       <in>DoubleStack.cpp</in>
       <in>DoubleStack.h</in>
+      <in>HashTable.cpp</in>
+      <in>HashTable.h</in>
       <in>LinkedList.cpp</in>
       <in>LinkedList.h</in>
       <in>array.cpp</in>
@@ -59,6 +64,8 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
+        <gdb_signals>
+        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>
