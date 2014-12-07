@@ -23,6 +23,9 @@
       <df name="prog7">
         <in>main.cpp</in>
       </df>
+      <df name="prog8">
+        <in>main.cpp</in>
+      </df>
       <in>Airport.cpp</in>
       <in>Airport.h</in>
       <in>BinarySearch.cpp</in>
@@ -37,6 +40,8 @@
       <in>array.h</in>
       <in>mathTree.cpp</in>
       <in>mathTree.h</in>
+      <in>sorting.cpp</in>
+      <in>sorting.h</in>
     </df>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -64,8 +69,6 @@
         <gdb_interceptlist>
           <gdbinterceptoptions gdb_all="false" gdb_unhandled="true" gdb_unexpected="true"/>
         </gdb_interceptlist>
-        <gdb_signals>
-        </gdb_signals>
         <gdb_options>
           <DebugOptions>
           </DebugOptions>

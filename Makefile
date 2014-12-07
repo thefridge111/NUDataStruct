@@ -1,10 +1,11 @@
 CC = g++
 CCFLAGS = -Wall -g
 
-all: program1 program2 program3 program4 program5 program6 program7
-
-clean: clean1 clean2 clean3 clean4 clean5 clean6 clean7
-
+#all: program1 program2 program3 program4 program5 program6 program7 program8
+all: program8
+	
+#clean: clean1 clean2 clean3 clean4 clean5 clean6 clean7 clean8
+clean: clean8
 
 ###PROGRAM 1#######################
 program1: prog1/main.o array.o Makefile
@@ -98,3 +99,15 @@ HashTable.o: HashTable.cpp HashTable.h Makefile
 prog7/main.o: prog7/main.cpp HashTable.h Makefile
 	${CC} ${CCFLAGS} -o prog7/main.o -c prog7/main.cpp
 
+###PROGRAM 8#######################
+program8: prog8/main.o sorting.o Makefile
+	${CC} ${CCFLAGS} -o program8 prog8/main.o sorting.o
+
+clean8:
+	rm -f program8 prog8/main.o sorting.o *.core
+
+sorting.o: sorting.cpp sorting.h Makefile
+	${CC} ${CCFLAGS} -c sorting.cpp
+	
+prog8/main.o: prog8/main.cpp sorting.h Makefile
+	${CC} ${CCFLAGS} -o prog8/main.o -c prog8/main.cpp

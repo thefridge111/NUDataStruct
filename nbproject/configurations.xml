@@ -17,6 +17,9 @@
       <df name="prog7">
         <in>main.cpp</in>
       </df>
+      <df name="prog8">
+        <in>main.cpp</in>
+      </df>
       <in>BinarySearch.cpp</in>
       <in>BinarySearch.h</in>
       <in>HashTable.cpp</in>
@@ -25,6 +28,8 @@
       <in>LinkedList.h</in>
       <in>array.cpp</in>
       <in>array.h</in>
+      <in>sorting.cpp</in>
+      <in>sorting.h</in>
     </df>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -52,7 +57,7 @@
           <buildCommandWorkingDir>.</buildCommandWorkingDir>
           <buildCommand>${MAKE} -f Makefile</buildCommand>
           <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
-          <executablePath>program7.exe</executablePath>
+          <executablePath>program8.exe</executablePath>
           <ccTool>
             <incDir>
               <pElem></pElem>
@@ -85,6 +90,12 @@
       <item path="prog6/main.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="prog7/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="prog8/main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sorting.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="sorting.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>
