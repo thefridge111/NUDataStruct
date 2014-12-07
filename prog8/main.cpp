@@ -50,17 +50,23 @@ void runTest(int data[], int resetdata[], int n) {
     swap = 0;
     reset(data, resetdata, n);
     
+    cout << endl;
+    
     swap = heapsort(data, n);
     print(data, n, "Heap Sort");
     cout << "Swaps: " << swap << endl;
     swap = 0;
     reset(data, resetdata, n);
-        
+    
+    cout << endl;
+    
     swap = quicksort(data, n);
     print(data, n, "Quicksort");
     cout << "Swaps: " << swap << endl;
     swap = 0;
     reset(data, resetdata, n);
+    
+    cout << endl;
 }
 
 void reset(int data[], int data1[], int n) {

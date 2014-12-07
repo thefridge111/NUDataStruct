@@ -143,21 +143,25 @@ int partition(int data[], int n, unsigned int& pivot_index) {
     too_small_index = n - 1;
     
     while (too_big_index < too_small_index) {
-        if(data[too_big_index] < pivot) {
-            too_big_index++;
-        }
         if(data[too_small_index] > pivot) {
             too_small_index--;
-        }
+        }else if(data[too_big_index] < pivot) {
+            too_big_index++;
+        } 
+        
         if((data[too_big_index] > pivot) && (data[too_small_index] < pivot)) {
             swap(data[too_big_index], data[too_small_index]);
             swaps++;
         }
     }
-    pivot_index = too_small_index;
-    data[0] = data[too_small_index];
-    data[too_small_index] = pivot;
-    swaps++;
+    if (pivot >= data[too_small_index]) {           //Ensures pivot value is not incorrectly being
+        pivot_index = too_small_index;              //moved in front of values it is smaller than.
+        data[0] = data[too_small_index];
+        data[too_small_index] = pivot;
+        swaps++;
+    } else {
+        pivot_index = 0;
+    }
     
     return swaps;
 }
